@@ -1,7 +1,5 @@
 package exercise1;
 
-import java.io.DataInput;
-import java.io.DataOutput;
 import java.io.IOException;
 import java.util.regex.Pattern;
 
@@ -69,7 +67,7 @@ public class WordCount extends Configured implements Tool {
 
 	    	word = word.toLowerCase();
 	    	word = word.replaceAll("'","");   //remove single quotes
-	    	word = word.replaceAll("[^a-zA-Z]"," ");  //remove the rest with a space
+	    	word = word.replaceAll("[^a-zA-Z0-9]"," ");  //remove the rest with a space
 	    	word = word.trim(); //trim whitespaces
 	
 	    	//count subwords too
